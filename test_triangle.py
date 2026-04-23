@@ -23,3 +23,12 @@ def test_invalid():
 
     assert t0.type == TriangleType.INVALID
     assert t1.type == TriangleType.INVALID
+
+def test_all0():
+    t0 = Triangle(0,0,0)
+    assert t0.type == TriangleType.INVALID
+
+def test_negative():
+    t0 = Triangle(2,-1,4)
+    assert t0.type == TriangleType.INVALID
+
